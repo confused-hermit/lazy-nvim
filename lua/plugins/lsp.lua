@@ -21,7 +21,27 @@ return {
           },
         },
         rust_analyzer = {},
-        gopls = {},
+        gopls = {
+          settings = {
+            gopls = {
+              analyses = {
+                unusedparams = true,
+              },
+              hints = {
+                assignVariableTypes = true,
+                compositeLiteralFields = true,
+                compositeLiteralTypes = true,
+                constantValues = true,
+                functionTypeParameters = true,
+                parameterNames = true,
+                rangeVariableTypes = true,
+              },
+              staticcheck = true,
+              semanticTokens = true,
+            },
+          },
+        },
+        golangci_lint_ls = {},
         html = {},
         docker_compose_language_service = {},
         dockerls = {},

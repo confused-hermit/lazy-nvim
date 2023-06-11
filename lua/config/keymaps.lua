@@ -13,3 +13,10 @@ autocmd("Filetype", {
   pattern = { "python" },
   command = 'lua vim.keymap.set("n", "<leader>co", "<cmd>PyrightOrganizeImports<cr>", {desc = "Organize Imports" })',
 })
+augroup("golang", { clear = true })
+
+autocmd("Filetype", {
+  group = "golang",
+  pattern = { "go" },
+  command = 'lua vim.keymap.set("n", "<leader>co", "<cmd>GoModTidy<cr>", {desc = "Organize Imports" })',
+})
